@@ -1,0 +1,81 @@
+﻿@*@using Zeitnot.Shared
+
+
+@using System.Data.SqlTypes;
+@using System;
+@using System.Linq;
+@using System.Data.Linq;*@
+
+@page "/gallery"
+@*@inject HttpClient Http*@
+
+    <div class="menu">
+        <div class="tag">
+            <h1>Жанры</h1>
+        </div>
+        <a href="/gallery/#">
+            <div class="item">
+                <h3>Жанр 1</h3>
+            </div>
+        </a>
+        <a href="/gallery/#">
+            <div class="item">
+                <h3>Жанр 2</h3>
+            </div>
+        </a>
+        <a href="/gallery/#">
+            <div class="item">
+                <h3>Жанр 3</h3>
+            </div>
+        </a>
+        <a href="/gallery/#">
+            <div class="item">
+                <h3>Жанр 4</h3>
+            </div>
+        </a>
+    </div>
+    <div class="content">
+        <div class="tag">
+            <h1>Gallery</h1>
+        </div>
+        <div class="preview">
+            <div class="albums">
+
+                <p>efefe</p>
+                <p>3</p>
+                <p>2</p>
+                <p>2</p>
+
+                @*@foreach(var group in groups)
+                {
+                    <div class="case">@group.Name @group.Year</div>
+                    Console.WriteLine(group.Name);
+                }*@
+
+                @*<div class="case">Lorem @System.DateTime.Today</div>
+                <div class="case">
+                    Ipsum
+                    @{
+                    }
+
+                </div>
+                <div class="case">Ammet</div>
+                <div class="case">Dolor @System.DateTime.Today</div>
+                <div class="case">Sit</div>
+                <div class="case">Vacuous</div>
+                <div class="case">Ave @System.DateTime.Today</div>
+                <div class="case">Ignis</div>
+                <div class="case">Ordo</div>*@
+            </div>
+
+        </div>
+    </div>
+
+
+
+@*@functions{
+    static string connection = @"Data Source=DESKTOP-5QJFN1Q\SQLEXPRESS; Initial Catalog = Zeitnot; Integrated Security = True;";
+    static DataContext dataContext = new DataContext(connection);
+    Table<Groups> groups = dataContext.GetTable<Groups>();
+    }*@
+
